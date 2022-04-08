@@ -104,7 +104,7 @@ Label Label::extend(
     }
   }
   // Check feasibility before creating
-  if (new_resources[5]>4){
+  if (new_resources[4]>4){
       Label new_label(
       weight + 10*10+ adjacent_vertex.weight,
       new_node,
