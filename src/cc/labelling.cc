@@ -109,7 +109,7 @@ Label Label::extend(
       new_node,
       new_resources,
       new_partial_path,
-      params_ptr)
+      params_ptr);
   if (new_resources[4]>4){
       Label new_label(
       weight + 10*10+ adjacent_vertex.weight,
