@@ -104,20 +104,24 @@ Label Label::extend(
     }
   }
   // Check feasibility before creating
-  Label new_label(
-      weight + adjacent_vertex.weight,
-      new_node,
-      new_resources,
-      new_partial_path,
-      params_ptr);
+  float coss;
   if (new_resources[4]>4){
-      Label new_label(
-      weight + 10*10+ adjacent_vertex.weight,
+      coss=10*10;} else {
+      coss=0;}
+  Label new_label(
+      weight + coss+ adjacent_vertex.weight,
       new_node,
       new_resources,
       new_partial_path,
       params_ptr);
-  } 
+  //if (new_resources[4]>4){
+    //  Label new_label(
+      //weight + 10*10+ adjacent_vertex.weight,
+      //new_node,
+      //new_resources,
+      //new_partial_path,
+     // params_ptr);
+  //} 
   if (new_label.checkFeasibility(max_res, min_res)) {
     return new_label;
   } else {
