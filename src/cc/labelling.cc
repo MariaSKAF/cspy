@@ -104,12 +104,12 @@ Label Label::extend(
     }
   }
   // Check feasibility before creating
-  float coss;
-  if (new_resources[4]>4){
-      coss=10*10;} else {
-      coss=0;}
+  //float coss;
+  //if (new_resources[4]>4){
+    //  coss=10*10;} else {
+      //coss=0;}
   Label new_label(
-      weight + coss+ adjacent_vertex.weight,
+      weight + new_resources[6]+ adjacent_vertex.weight,
       new_node,
       new_resources,
       new_partial_path,
